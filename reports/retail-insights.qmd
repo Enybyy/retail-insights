@@ -20,6 +20,7 @@ execute:
 
 ```{r}
 results <- readRDS("../data/processed/results.rds")
+advanced <- readRDS("../data/processed/advanced.rds")
 m <- results$metrics
 money <- function(x) paste0("GBP ", format(round(x, 2), big.mark = ",", nsmall = 2, scientific = FALSE, trim = TRUE))
 count <- function(x) format(x, big.mark = ",", scientific = FALSE, trim = TRUE)
@@ -134,6 +135,39 @@ display_table(segments)
 Champions have high recency, frequency and monetary scores. At-risk repeat buyers have a recency score of at most two and a frequency score of at least three. Loyal buyers have high frequency after the previous rules are applied. Recent low-frequency buyers have high recency and low frequency. Remaining buyers are grouped together. These rules are transparent labels for observed behaviour, not a validated churn model.
 
 ## Recommendations and how to evaluate them
+
+### Credit candidates and sensitivity
+
+The stricter matching review identifies **`r count(advanced$pair_summary$unique_candidate_pairs)`** groups with exactly one purchase and one same-day credit sharing customer, product, absolute quantity and price. Their purchase value totals **`r money(advanced$pair_summary$unique_candidate_purchase_value_gbp)`**. Another **`r count(advanced$pair_summary$ambiguous_groups)`** groups remain ambiguous. These are candidates for invoice review, not confirmed original-invoice links.
+
+```{r}
+policy <- advanced$customer_policy_sensitivity
+policy$top10_sales_share <- vapply(policy$top10_sales_share, pct, character(1))
+names(policy) <- c("Purchase policy", "Customers", "Identified purchase sales GBP", "At risk repeat buyers", "Top 10 percent sales share")
+display_table(policy)
+```
+
+### Cohorts and repeat purchasing
+
+![Share of each first-observed cohort purchasing in later complete months.](figures/cohort_retention.png)
+
+Cohort entry is the first purchase visible in the file, not confirmed customer acquisition. Early cohorts can include customers acquired before December 2010. Each cell divides active buyers in that month by the original cohort size. A buyer can skip a month and return later; this is monthly purchasing activity rather than survival or a continuous subscription retention measure. Unobserved future months are blank, and the final partial month is excluded.
+
+### Product concentration and order composition
+
+![Cumulative share of gross purchase sales across product codes.](figures/product_pareto.png)
+
+![Distribution of merchandise value per purchase invoice.](figures/order_distribution.png)
+
+High sales concentration supports a shortlist for product review, but purchasing value does not reveal gross margin, replenishment lead time or availability. The full product table includes credit-only codes and reconciles all merchandise credits; this corrects the purchased-product ranking's narrower scope.
+
+![Largest recorded product credit values.](figures/product_credits.png)
+
+![Recorded purchase activity by hour and weekday.](figures/purchase_timing.png)
+
+These observed transaction times describe invoice recording, not delivery timing, staff workload or customer browsing. Saturday absence in the source must not be interpreted as evidence of zero potential demand.
+
+### Decision tests
 
 **Review credits before changing product strategy.** Start with large negative lines and their invoice references, then obtain original invoices, reason codes and a product master. The useful outcome is a verified breakdown of returns, cancellations and corrections. The present file supports an investigation list, not attribution of causes.
 

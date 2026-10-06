@@ -1,0 +1,4 @@
+policy,customers,identified_purchase_sales_gbp,at_risk_buyers,top10_sales_share
+Primary purchases,4334,8761066.65,384,0.613378950838138
+Exact repeats removed,4334,8737227.64,384,0.6141552184624092
+Unique same-day candidates excluded,4332,8473211.95,384,0.6019261762949292

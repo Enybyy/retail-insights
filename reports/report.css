@@ -12,10 +12,5 @@ table { font-size: .93rem; }
 table thead { border-bottom: 2px solid var(--petrol); }
 table th, table td { padding: .65rem .75rem !important; }
 figcaption { color: var(--slate); }
-@media (prefers-color-scheme: dark) {
-  body { background: #142331; color: #edf4f8; }
-  h1, h2, h3 { color: #edf4f8; }
-  a { color: #72ccd1; }
-  .subtitle, figcaption { color: #bdccd7; }
-}
+html, body { background: #fff !important; color-scheme: light; }
 @media (max-width: 600px) { body { font-size: 16px; } }

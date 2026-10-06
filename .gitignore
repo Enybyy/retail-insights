@@ -17,3 +17,6 @@ reports/tables/customer_priorities.csv
 reports/*.xlsx
 reports/session-info.txt
 *.log
+
+reports/downloads/*.inspect.ndjson
+site/downloads/*.inspect.ndjson

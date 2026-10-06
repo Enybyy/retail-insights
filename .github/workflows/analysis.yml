@@ -1,0 +1,32 @@
+name: Verify complete R analysis
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.6.1'
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-renv@v2
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Check classification and modelling rules
+        run: Rscript scripts/check_rules.R
+      - name: Download verified source and rebuild the analysis
+        run: Rscript scripts/run_analysis.R
+      - name: Render full report
+        run: quarto render reports/retail-insights.qmd
+      - uses: actions/upload-artifact@v4
+        with:
+          name: analytical-verification
+          path: |
+            reports/verification.json
+            reports/figures/
+            reports/*.html
