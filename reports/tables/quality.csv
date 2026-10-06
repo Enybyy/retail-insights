@@ -1,0 +1,10 @@
+issue,rows,pct_source_rows
+Source rows,541909,1
+Exact repeated rows after first occurrence,5268,0.009721189350979592
+Missing customer ID,135080,0.249266943342886
+Missing description,1454,0.002683107311375157
+Nonpositive quantity,10624,0.019604767590130447
+Nonpositive unit price,2517,0.0046446912673530055
+Cancellation invoice prefix,9288,0.017139409015166755
+Non-merchandise code,2995,0.005526758182646902
+Invalid core fields,0,0

@@ -1,0 +1,21 @@
+{
+  "source_rows": 541909,
+  "source_start": "2010-12-01",
+  "source_end": "2011-12-09",
+  "snapshot_day": "2011-12-10",
+  "repeated_rows": 5268,
+  "missing_customer_rows": 135080,
+  "purchase_rows": 527725,
+  "purchase_sales_gbp": 10271034.61,
+  "credit_value_gbp": 478724.18,
+  "sales_less_recorded_credits_gbp": 9792310.43,
+  "purchase_orders": 19773,
+  "purchase_aov_gbp": 519.4475,
+  "identified_customers": 4334,
+  "identified_purchase_sales_share": 0.853,
+  "top_10pct_customer_count": 434,
+  "top_10pct_identified_sales_share": 0.6134,
+  "repeat_buyer_share": 0.6527,
+  "at_risk_buyers": 384,
+  "uk_purchase_sales_share": 0.8516
+}

@@ -1,0 +1,3 @@
+policy,purchase_rows,purchase_sales_gbp,credit_value_gbp,sales_less_recorded_credits_gbp,difference_from_primary_gbp
+Keep exact repeated rows (primary),527725,10271034.610000001,478724.18,9792310.430000002,0
+Remove exact repeats (sensitivity),522504,10246820.870000001,475901.16000000003,9770919.71,-24213.740000000224

@@ -1,0 +1,46 @@
+stock_code,ledger_class,rows,signed_value_gbp
+POST,Services and administrative codes,1252,66230.64
+DOT,Services and administrative codes,707,206245.48
+M,Services and administrative codes,565,-68674.19
+C2,Services and administrative codes,143,6986
+D,Services and administrative codes,77,-5696.22
+S,Services and administrative codes,63,-3049.39
+BANK CHARGES,Services and administrative codes,37,-7175.639
+AMAZONFEE,Services and administrative codes,34,-221520.5
+CRUK,Services and administrative codes,16,-7933.43
+DCGSSGIRL,Services and administrative codes,13,144.43
+DCGSSBOY,Services and administrative codes,11,150.55
+gift_0001_20,Services and administrative codes,9,167.05
+gift_0001_10,Services and administrative codes,8,74.97
+gift_0001_30,Services and administrative codes,7,175.53
+M,Zero unit price,6,0
+DCGS0003,Services and administrative codes,4,9.94
+POST,Zero unit price,4,0
+gift_0001_50,Services and administrative codes,4,167.56
+DOT,Zero unit price,3,0
+PADS,Services and administrative codes,3,0.003
+gift_0001_40,Services and administrative codes,3,100.69999999999999
+B,Negative unit price,2,-22124.12
+DCGS0076,Services and administrative codes,2,48.39
+B,Services and administrative codes,1,11062.06
+C2,Zero unit price,1,0
+DCGS0003,Zero unit price,1,0
+DCGS0004,Services and administrative codes,1,16.63
+DCGS0055,Zero unit price,1,0
+DCGS0057,Zero unit price,1,0
+DCGS0066P,Zero unit price,1,0
+DCGS0067,Zero unit price,1,0
+DCGS0068,Zero unit price,1,0
+DCGS0069,Services and administrative codes,1,15.79
+DCGS0069,Zero unit price,1,0
+DCGS0070,Services and administrative codes,1,12.72
+DCGS0070,Zero unit price,1,0
+DCGS0071,Zero unit price,1,0
+DCGS0072,Zero unit price,1,0
+DCGS0073,Zero unit price,1,0
+DCGS0074,Zero unit price,1,0
+PADS,Zero unit price,1,0
+gift_0001_10,Zero unit price,1,0
+gift_0001_20,Zero unit price,1,0
+gift_0001_30,Zero unit price,1,0
+m,Services and administrative codes,1,2.55

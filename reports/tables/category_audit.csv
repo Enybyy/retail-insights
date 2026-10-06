@@ -1,0 +1,6 @@
+ledger_class,rows,signed_value_gbp,repeated_rows
+Merchandise purchases,527725,10271034.610000001,5221
+Merchandise credits and adjustments,8704,-478724.18,36
+Services and administrative codes,2963,-22438.376,6
+Zero unit price,2515,0,5
+Negative unit price,2,-22124.12,0

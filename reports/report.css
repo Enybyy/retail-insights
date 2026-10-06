@@ -1,0 +1,21 @@
+:root { --ink: #16324f; --petrol: #087f8c; --slate: #526477; --mist: #e8eef3; }
+body { font-family: "Segoe UI", sans-serif; color: var(--ink); line-height: 1.65; }
+h1, h2, h3 { font-weight: 650; color: var(--ink); }
+h1.title { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.12; }
+.subtitle { color: var(--slate); font-size: 1.15rem; }
+a { color: #076a75; text-underline-offset: .2em; }
+a:focus-visible { outline: 3px solid #c07a2c; outline-offset: 3px; }
+main p, main li { max-width: 76ch; }
+img { max-width: 100%; height: auto; }
+.cell-output-display { overflow-x: auto; }
+table { font-size: .93rem; }
+table thead { border-bottom: 2px solid var(--petrol); }
+table th, table td { padding: .65rem .75rem !important; }
+figcaption { color: var(--slate); }
+@media (prefers-color-scheme: dark) {
+  body { background: #142331; color: #edf4f8; }
+  h1, h2, h3 { color: #edf4f8; }
+  a { color: #72ccd1; }
+  .subtitle, figcaption { color: #bdccd7; }
+}
+@media (max-width: 600px) { body { font-size: 16px; } }
